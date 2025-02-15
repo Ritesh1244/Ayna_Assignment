@@ -1,73 +1,4 @@
-// import React, { useState } from 'react';  
 
-// function Signup() {  
-//     const [signupInfo, setSignupInfo] = useState({  
-//         name: "",  
-//         email: "",  
-//         password: ""  
-//     });  
-
-//     const handleChange = (e) => {  
-//         // const { name, value } = e.target;  
-//         const name = e.target.value 
-//         console.log("name is", name); 
-        
-//         // Update the corresponding state based on input name  
-//         // setSignupInfo(prevInfo => ({  
-//         //     ...prevInfo,  
-//         //     [name]: value // This sets the appropriate key in state to the new value  
-//         // }));  
-//     };  
-
-//     // console.log("signup data is ",signupInfo)
-//     return (  
-//         <div>  
-//             <h1>Signup</h1>  
-//             <form>  
-//                 {/* Name */}  
-//                 <div>  
-//                     <label htmlFor='name'>Username:</label>  
-//                     <input  
-//                         onChange={handleChange}  
-//                         type='text'  
-//                         id='name'  
-//                         name='name' // Make sure this matches the state key  
-//                         placeholder='Enter your username'  
-//                         value={signupInfo.name} // Controlled input  
-//                     />  
-//                 </div>  
-
-//                 {/* Email */}  
-//                 <div>  
-//                     <label htmlFor='email'>Email</label>  
-//                     <input  
-//                         // onChange={handleChange}  
-//                         type='email'  
-//                         id='email'  
-//                         name='email' // Make sure this matches the state key  
-//                         placeholder='Enter your email'  
-//                         // value={signupInfo.email} // Controlled input  
-//                     />  
-//                 </div>  
-
-//                 {/* Password */}  
-//                 <div>  
-//                     <label htmlFor='password'>Password</label>  
-//                     <input  
-//                         // onChange={handleChange}  
-//                         type='password'  
-//                         id='password'  
-//                         name='password' // Ensure this matches the state key  
-//                         placeholder='Enter your password'  
-//                         // value={signupInfo.password} // Controlled input  
-//                     />  
-//                 </div>  
-//             </form>  
-//         </div>  
-//     );  
-// }  
-
-// export default Signup;
 
 
 
@@ -97,7 +28,7 @@ function Signup() {
         e.preventDefault();
 
         try {
-            const response = await fetch("http://localhost:1337/api/auth/local/register", {
+            const response = await fetch("https://strapi-backend-1-15iw.onrender.com/api/auth/local/register", {
                 method: "POST",
                 headers: { "Content-Type": "application/json" },
                 body: JSON.stringify(signupInfo)
