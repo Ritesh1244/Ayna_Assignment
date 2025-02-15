@@ -7,7 +7,7 @@ function App() {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    const ws = new WebSocket("ws://localhost:5000");
+    const ws = new WebSocket("wss://ayna-assignment-phi.vercel.app");
     setSocket(ws);
 
     ws.onopen = () => {
