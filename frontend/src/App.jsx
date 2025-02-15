@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Routes, Route, Navigate } from "react-router-dom";
 import './App.css';
 import Home from './pages/Home';
-import Signup from './pages/signup';
+import Signup from './pages/Signup';
 import Login from './pages/Login';
 import RefreshHandler from './RefreshHandler';
 
